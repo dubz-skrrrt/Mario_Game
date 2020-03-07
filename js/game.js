@@ -6,16 +6,18 @@ var config = {
     type: Phaser.AUTO,
       width: 1400,
       height: 768,
-      scene: [Scene1, Scene2],
+      scene: [Scene1, Level1, Level2, Level3, Level4, death, uG],
       physics: {
           default: 'arcade',
+          
           arcade: {
               gravity: {y: 500},
-              debug: false
+              debug: true,
+              overlapBias: 20
           }
       },
      
   };
   
-  
+
   let game = new Phaser.Game(config);
